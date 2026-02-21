@@ -1,0 +1,69 @@
+{
+  "llm_providers": {
+    "openai": {
+      "provider": "openai",
+      "api_key": "",
+      "base_url": null,
+      "model": "gpt-4o-mini",
+      "timeout": 30,
+      "max_retries": 3
+    },
+    "kimi": {
+      "provider": "kimi",
+      "api_key": "",
+      "base_url": "https://api.moonshot.cn/v1",
+      "model": "moonshot-v1-8k",
+      "timeout": 30,
+      "max_retries": 3
+    },
+    "doubao": {
+      "provider": "doubao",
+      "api_key": "",
+      "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+      "model": "doubao-pro-32k",
+      "timeout": 30,
+      "max_retries": 3
+    },
+    "ollama": {
+      "provider": "ollama",
+      "api_key": null,
+      "base_url": "http://localhost:11434/v1",
+      "model": "llama3.2",
+      "timeout": 60,
+      "max_retries": 3
+    }
+  },
+  "embedding": {
+    "model_name": "BAAI/bge-small-en-v1.5",
+    "device": "cpu",
+    "batch_size": 32,
+    "dimension": 384
+  },
+  "memory": {
+    "vector_db_path": "data/chroma",
+    "collection_name": "file_memory",
+    "rules_path": "data/rules.json",
+    "max_memory_entries": 10000
+  },
+  "safety": {
+    "allowed_workspace": "",
+    "forbidden_patterns": [
+      "system32",
+      "windows",
+      "program files",
+      ".git",
+      "node_modules"
+    ],
+    "require_confirmation_for_move": true,
+    "require_confirmation_for_delete": true,
+    "confidence_threshold": 0.7
+  },
+  "ui": {
+    "theme": "dark",
+    "accent_color": "#00d4ff",
+    "window_width": 1400,
+    "window_height": 900,
+    "log_max_lines": 1000
+  },
+  "active_provider": "openai"
+}

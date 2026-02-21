@@ -1,0 +1,33 @@
+models:
+  classify: deepseek
+  decision: deepseek
+  summarize: deepseek
+  codegen: deepseek
+  chat: deepseek
+
+api_keys:
+  deepseek: "sk-gbqVMj69I8iDOLzFvffkHQ"
+  doubao: ""
+  tongyi: ""
+  zhipu: ""
+  baichuan: ""
+  wenxin: ""
+
+model_settings:
+  deepseek:
+    model: deepseek-chat
+  doubao:
+    model: doubao-pro-32k
+  tongyi:
+    model: qwen-turbo
+  zhipu:
+    model: glm-4
+  baichuan:
+    model: Baichuan4
+  wenxin:
+    model: ERNIE-Bot-4
+
+fallback:
+  enabled: true
+  max_retries: 3
+  retry_delay: 1.0
